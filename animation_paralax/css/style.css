@@ -7,12 +7,20 @@ html{
 *::before{
    box-sizing: inherit;
 }
+a{
+   text-decoration: none;
+   color: inherit;
+}
 body{
+   font-family: "Prompt", sans-serif;
    color: #fff;
    font-size: 16px;
-   
+   font-weight: 400;
+   line-height: 1.2;
 }
-
+h1{
+   font-family: "Gravitas One", serif;
+}
 .menu{
    position: fixed;
    z-index: 1;
