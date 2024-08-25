@@ -32,9 +32,7 @@ body{
    justify-content: center;
    gap: 60px;
 }
-.top{
-   height: 200vh;
-}
+
 .top__layer{
    /* height: 100vh;
    width: 100vh; */
@@ -45,16 +43,29 @@ body{
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
-   animation-timing-function: linear;
-   animation-timeline: scroll();
-   /* animation-duration: 5s; */
-   animation-fill-mode: both;
-   animation-range: 0 200vh;
+   
    display: flex;
    justify-content: center;
    align-items: center;
    text-align: center;
 }
+
+
+
+@supports(animation-timeline: scroll()){
+   .top{
+      height: 200vh;
+   }
+   .top__layer{
+      animation-timing-function: linear;
+      animation-timeline: scroll();
+      /* animation-duration: 5s; */
+      animation-fill-mode: both;
+      animation-range: 0 200vh;
+   }
+}
+
+
 .top__layer--5{
    animation-name: top-layer-5;
 }
@@ -139,7 +150,7 @@ body{
    width: 10px;
    height: 10px;
    position: relative;
-   margin: 0 auto;
+   margin: 23px auto 0;
 }
 .arrows::after,
 .arrows::before{
