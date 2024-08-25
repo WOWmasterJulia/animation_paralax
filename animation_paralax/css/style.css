@@ -18,9 +18,7 @@ body{
    font-weight: 400;
    line-height: 1.2;
 }
-h1{
-   font-family: "Gravitas One", serif;
-}
+
 .menu{
    position: fixed;
    z-index: 1;
@@ -35,7 +33,7 @@ h1{
    gap: 60px;
 }
 .top{
-   height: 500vh;
+   height: 200vh;
 }
 .top__layer{
    /* height: 100vh;
@@ -48,9 +46,14 @@ h1{
    background-repeat: no-repeat;
    background-position: center;
    animation-timing-function: linear;
-   /* animation-timeline: scroll(); */
-   animation-duration: 5s;
+   animation-timeline: scroll();
+   /* animation-duration: 5s; */
    animation-fill-mode: both;
+   animation-range: 0 200vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
 }
 .top__layer--5{
    animation-name: top-layer-5;
@@ -81,7 +84,7 @@ h1{
 }
 @keyframes top-layer-2{
    to{
-      scale: 3;
+      scale: 2;
    }
 }
 .top__layer--1{
@@ -91,4 +94,37 @@ h1{
    to{
       scale: 4;
    }
+}
+.top__text{
+   font-family: "Gravitas One", serif;
+   position: relative;
+   z-index: 1;
+   animation-name: text;
+   opacity: 0;
+   
+   animation-timing-function: linear;
+   animation-timeline: scroll();
+   /* animation-duration: 5s; */
+   animation-fill-mode: both;
+   animation-range: 50vh 100vh;
+}
+@keyframes text{
+   to{
+      opacity: 1;
+   }
+
+}
+.title{
+   text-transform: uppercase;
+   font-size: 120px;
+   font-weight: 400;
+}
+.text{
+   font-size: 24px;
+}
+.arrows-box{
+
+}
+.arrows{
+   
 }
